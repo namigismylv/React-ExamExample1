@@ -1,0 +1,10 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "title": "Long Sleeve shirt",
+        "image": "https://preview.colorlib.com/theme/shop/img/l1.jpg.webp",
+        "price": 150.00
+      }
+    ]
+  }
