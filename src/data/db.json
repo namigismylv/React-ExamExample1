@@ -1,10 +1,52 @@
 {
-    "products": [
-      {
-        "id": "1",
-        "title": "Long Sleeve shirt",
-        "image": "https://preview.colorlib.com/theme/shop/img/l1.jpg.webp",
-        "price": 150.00
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": "27c08314-ea57-4296-a575-d78bd2ed8734",
+      "image": "https://preview.colorlib.com/theme/shop/img/l1.jpg.webp",
+      "title": "Long Sleeve shirt",
+      "price": 150
+    },
+    {
+      "id": "28232640-15de-419b-aa82-1985b706516c",
+      "image": "https://preview.colorlib.com/theme/shop/img/l2.jpg.webp",
+      "title": "Medium Sleeve shirt",
+      "price": 40
+    },
+    {
+      "id": "83bb6a86-3255-4131-9b6f-444d9c9f77fb",
+      "image": "https://preview.colorlib.com/theme/shop/img/l3.jpg.webp",
+      "title": "Longer Sleeve Shirt",
+      "price": 80
+    },
+    {
+      "id": "100d5cf5-913a-497a-aebf-8ee68695864f",
+      "image": "https://preview.colorlib.com/theme/shop/img/l4.jpg.webp",
+      "title": "Footbal shirt",
+      "price": 120
+    },
+    {
+      "id": "a45e4592-376a-42b9-a124-94c972b985bf",
+      "image": "https://preview.colorlib.com/theme/shop/img/l5.jpg.webp",
+      "title": "Women Long Sleeve shirt",
+      "price": 100
+    },
+    {
+      "id": "4e136ee6-4758-4c02-83ab-a10f19f3c7d9",
+      "image": "https://preview.colorlib.com/theme/shop/img/l6.jpg.webp",
+      "title": "Women short Sleeve shirt",
+      "price": 40
+    },
+    {
+      "id": "6c1167c3-75bc-4a49-9e0a-63e731a49686",
+      "image": "https://preview.colorlib.com/theme/shop/img/l7.jpg.webp",
+      "title": "Women xl tshirt",
+      "price": 20
+    },
+    {
+      "id": "7ecce3ad-da5b-469c-a3ee-d1f9e4dc1923",
+      "image": "https://preview.colorlib.com/theme/shop/img/l8.jpg.webp",
+      "title": "Women medium short",
+      "price": 80
+    }
+  ]
+}

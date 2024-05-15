@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import MainContext from '../../../Context/Context'
+import BasketItems from '../../../Components/Site/BasketItems/BasketItems'
 
 const Basket = () => {
+  const {basketItems} =useContext(MainContext)
   return (
-    <div>
-      
-    </div>
+    <>
+    <BasketItems basketItems={basketItems}/>
+    </>
   )
 }
 

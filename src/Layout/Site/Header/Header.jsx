@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import MainContext from "../../../Context/Context";
 
 const Header = () => {
+  const {basketItems}=useContext(MainContext)
   return (
     <header>
       <div className="header__top">
@@ -31,7 +33,7 @@ const Header = () => {
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/basket">Cart <span>0</span></Link>
+                <Link to="/basket">Cart <span>{basketItems.length}</span></Link>
             </li>
           </ul>
         </div>
