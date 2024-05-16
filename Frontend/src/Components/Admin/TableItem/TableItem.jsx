@@ -10,7 +10,7 @@ const TableItem = ({ item }) => {
   }
   return (
     <tr>
-      <th scope="row">{item.id}</th>
+      <th scope="row">{item._id}</th>
       <td>
         <img src={item.image} width="60px" height="60px" alt="" />
       </td>

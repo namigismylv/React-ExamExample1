@@ -38,7 +38,7 @@ function deleteFromBasket(item){
   }
 }
   useEffect(() => {
-    axios.get("http://localhost:3000/products").then((res) => {
+    axios.get("http://localhost:8080/products").then((res) => {
       setData([...res.data]);
     });
   }, []);
