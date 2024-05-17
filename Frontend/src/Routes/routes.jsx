@@ -5,6 +5,7 @@ import AdminRoot from "../Pages/Admin/AdminRoot";
 import Dashboard from "../Pages/Admin/Dashboard/Dashboard";
 import Basket from "../Pages/Site/Basket/Basket";
 import Add from "../Pages/Admin/Add/Add";
+import Detail from "../Pages/Site/Detail/Detail";
 
 const ROUTES = [
   {
@@ -19,6 +20,10 @@ const ROUTES = [
         path: "basket",
         element: <Basket />,
       },
+      {
+        path:"detail/:id",
+        element:<Detail/>
+      }
     ],
   },
   {

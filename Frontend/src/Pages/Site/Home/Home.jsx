@@ -1,10 +1,15 @@
 import React, { useContext } from "react";
 import Cards from "../../../Components/Site/Cards/Cards";
 import MainContext from "../../../Context/Context";
+import {Helmet} from "react-helmet";
 
 const Home = () => {
   const { data } = useContext(MainContext);
   return (
+    <>
+    <Helmet>
+    <title>Home</title>
+    </Helmet>
     <main>
       <section id="men">
         <div className="men__div mt-5">
@@ -24,6 +29,7 @@ const Home = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

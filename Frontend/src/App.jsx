@@ -12,7 +12,7 @@ function App() {
     localStorage.setItem("basketItems",JSON.stringify(basketItems))
   },[basketItems])
  function addToBasket(item){
-  const target=basketItems.find(x=>x.item.id==item.id)
+  const target=basketItems.find(x=>x.item._id==item._id)
   if(target){
     target.count+=1
     target.totalPrice+=item.price
@@ -27,14 +27,14 @@ function App() {
   }
 }
 function deleteFromBasket(item){
-  const target=basketItems.find(x=>x.item.id==item.id)
+  const target=basketItems.find(x=>x.item._id==item._id)
   if(target.count>1){
     target.count-=1
     target.totalPrice-=item.price
     setBasketItem([...basketItems])
   }
   else{
-    setBasketItem([...basketItems.filter(x=>x.item.id != item.id)])
+    setBasketItem([...basketItems.filter(x=>x.item._id != item._id)])
   }
 }
   useEffect(() => {

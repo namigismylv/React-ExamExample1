@@ -28,18 +28,27 @@ app.get("/products", async (req, res) => {
 })
 app.get("/products/:id", async (req, res) => {
     const { id } = req.params
-    const result=await Products.findById(id)
+    const result = await Products.findById(id)
     res.send(result)
 
 })
-app.delete("/products/:id", (req, res) => { })
+app.delete("/products/:id", async (req, res) => {
+    const { id } = req.params
+    await Products.findByIdAndDelete(id)
+    const item = await Products.find()
+    res.send(item)
+})
 app.post("/products", async (req, res) => {
     const { image, title, price } = req.body
     const newProd = await new Products({ image: image, title: title, price: price })
     newProd.save()
-    res.send("item created")
+    res.send(newProd)
 })
-app.put("/products/:id", (req, res) => { })
+app.put("/products/:id", async (req, res) => {
+    const { id } = req.params
+    await Products.findByIdAndUpdate(id, { ...req.body })
+    res.send("item updated")
+})
 
 mongoose.connect(process.env.CONNECTION_STRING).then(res => {
     console.log("db connected");

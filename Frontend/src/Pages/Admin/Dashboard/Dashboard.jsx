@@ -1,13 +1,17 @@
-import React, { useContext } from 'react'
-import MainContext from '../../../Context/Context'
-import Table from '../../../Components/Admin/Table/Table'
+import React, { useContext } from "react";
+import MainContext from "../../../Context/Context";
+import Table from "../../../Components/Admin/Table/Table";
+import { Helmet } from "react-helmet";
 const Dashboard = () => {
-  const {data}=useContext(MainContext)
+  const { data } = useContext(MainContext);
   return (
     <>
-      <Table items={data}/>
+      <Helmet>
+        <title>Dashboard</title>
+      </Helmet>
+      <Table items={data} />
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

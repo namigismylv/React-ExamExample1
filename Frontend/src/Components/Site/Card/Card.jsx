@@ -11,7 +11,7 @@ const Card = ({item}) => {
             <h5>{item.title}</h5>
             <h3>${item.price}</h3>
             <button className='btn btn-primary' onClick={()=>addToBasket(item)}>Add To Basket</button>
-            <Link to='detail/id' className='text-decoration-none'> Go to Detail</Link>
+            <Link to={`/detail/${item._id}`} className='text-decoration-none'> Go to Detail</Link>
 
         </div>
     </div>

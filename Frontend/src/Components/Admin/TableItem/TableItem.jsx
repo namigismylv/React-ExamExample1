@@ -3,11 +3,7 @@ import axios from "axios";
 import MainContext from "../../../Context/Context";
 const TableItem = ({ item }) => {
   const { data, setData } = useContext(MainContext);
-  function deleteItem(id) {
-    axios.delete(`http://localhost:3000/products/${id}`).then((res) => {
-        setData([...data.filter((x)=>x.id != res.data.id)])
-    });
-  }
+
   return (
     <tr>
       <th scope="row">{item._id}</th>
@@ -17,7 +13,18 @@ const TableItem = ({ item }) => {
       <td>{item.title}</td>
       <td>{item.price}$</td>
       <td>
-        <button className="btn btn-danger" onClick={()=>deleteItem(item.id)}>delete</button>
+        <button
+          className="btn btn-danger"
+          onClick={() => {
+            axios
+              .delete(`http://localhost:8080/products/${item._id}`)
+              .then(res => {
+                setData([...res.data]);
+              });
+          }}
+        >
+          delete
+        </button>
       </td>
     </tr>
   );

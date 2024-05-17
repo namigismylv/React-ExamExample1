@@ -3,19 +3,23 @@ import { Formik } from "formik";
 import { v4 as uuidv4 } from "uuid";
 import MainContext from "../../../Context/Context";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 const Add = () => {
-  const {data,setData}=useContext(MainContext)
+  const { data, setData } = useContext(MainContext);
   return (
-    <div>
-      <h1>Anywhere in your app!</h1>
+    <div className="formik">
+      <Helmet>
+        <title>Add</title>
+      </Helmet>
       <Formik
         initialValues={{ image: "", title: "", price: "" }}
         validate={(values) => {}}
         onSubmit={(values, { setSubmitting }) => {
-          axios.post("http://localhost:8080/products").then(res=>{
-            setData([...data,res.data]);
-          });
-
+          axios
+            .post("http://localhost:8080/products", { ...values })
+            .then((res) => {
+              setData([...data, res.data]);
+            });
         }}
       >
         {({

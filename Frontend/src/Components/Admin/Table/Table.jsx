@@ -19,7 +19,7 @@ const Table = ({items}) => {
     {
         items.map((item,index)=>{
             return(
-                <TableItem item={item}/>
+                <TableItem item={item} key={index}/>
             )
         })
     }
