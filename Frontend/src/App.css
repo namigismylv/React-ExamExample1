@@ -42,3 +42,11 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+body{
+	font-family: "Poppins";
+	a{
+		text-decoration:  none;
+	}
+}
+
+

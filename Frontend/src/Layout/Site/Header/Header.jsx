@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import './Header.css'
 import MainContext from "../../../Context/Context";
 
 const Header = () => {
-  const {basketItems}=useContext(MainContext)
+  const {basketItems,input,setInput}=useContext(MainContext)
   return (
     <header>
       <div className="header__top">
@@ -32,8 +33,11 @@ const Header = () => {
             <li>
                 <Link to="/">Home</Link>
             </li>
+            <li className="header__basket">
+                <Link to="/basket" className="header__basket__link"> <i class="fa-solid fa-cart-shopping"></i> <span className="basketSup">{basketItems.length}</span></Link>
+            </li>
             <li>
-                <Link to="/basket">Cart <span>{basketItems.length}</span></Link>
+              <input className="header__search" type="text" placeholder="search" value={input} onChange={(e)=>setInput(e.target.value)} />
             </li>
           </ul>
         </div>

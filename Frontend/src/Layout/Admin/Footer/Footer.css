@@ -1,0 +1,19 @@
+.footerAdmin{
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+
+    p{
+        color: #777777;
+        font-size: 15px;
+        span{
+            color: #f41068;
+
+        }
+        i{
+            color: #f41068;
+        }
+    }
+}

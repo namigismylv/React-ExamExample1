@@ -4,7 +4,7 @@ import TableItem from '../TableItem/TableItem'
 const Table = ({items}) => {
   return (
     <>
-      <table class="table table-dark">
+      <table class="table table-dark table-striped mt-5 mb-5">
   <thead>
     <tr>
       <th scope="col">Id</th>

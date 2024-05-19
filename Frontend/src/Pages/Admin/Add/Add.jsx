@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Formik } from "formik";
-import { v4 as uuidv4 } from "uuid";
 import MainContext from "../../../Context/Context";
 import axios from "axios";
+import './Add.css'
 import { Helmet } from "react-helmet";
 const Add = () => {
   const { data, setData } = useContext(MainContext);
@@ -32,7 +32,7 @@ const Add = () => {
           isSubmitting,
           /* and other goodies */
         }) => (
-          <form onSubmit={handleSubmit}>
+          <form id="addForm" onSubmit={handleSubmit}>
             <input
               type="text"
               name="image"

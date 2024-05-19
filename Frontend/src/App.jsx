@@ -7,6 +7,9 @@ import './App.css'
 function App() {
   const [data, setData] = useState([]);
   const [basketItems,setBasketItem]=useState(localStorage.getItem("basketItems")? JSON.parse(localStorage.getItem("basketItems")):[])
+  const [input,setInput]=useState("")
+  const [error,setError]=useState("")
+  const [sort,setSort]=useState(null)
   const router = createBrowserRouter(ROUTES);
   useEffect(()=>{
     localStorage.setItem("basketItems",JSON.stringify(basketItems))
@@ -40,7 +43,10 @@ function deleteFromBasket(item){
   useEffect(() => {
     axios.get("http://localhost:8080/products").then((res) => {
       setData([...res.data]);
-    });
+      setLoading(false)
+    }).catch(error=>{
+      setError(error)
+    })
   }, []);
   const contextData = {
     data,
@@ -48,7 +54,13 @@ function deleteFromBasket(item){
     basketItems,
     setBasketItem,
     addToBasket,
-    deleteFromBasket
+    deleteFromBasket,
+    input,
+    setInput,
+    error,
+    setError,
+    sort,
+    setSort
   };
   return (
     <MainContext.Provider value={contextData}>

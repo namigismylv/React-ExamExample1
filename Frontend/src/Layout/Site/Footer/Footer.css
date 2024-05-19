@@ -1,0 +1,95 @@
+.footer {
+  padding: 100px;
+  background-color: #222222;
+
+  .footer__top__widget {
+    h6 {
+      color: #fff;
+      margin-bottom: 25px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 14px;
+      color: #777777;
+      font-weight: 300;
+      line-height: 1.625em;
+    }
+    .footer__top__widget--input{
+        position: relative;
+        input{
+            border: none;
+            width: 80% ;
+            font-weight: 300;
+            background: #191919;
+            color: #777;
+            padding:8px 12px 8px 20px ;
+            border-radius: 0;
+            font-size: 14px;
+
+        }
+        button{
+            color: #fff;
+            border-radius: 0;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            padding: 10px 12px;
+            border: 0;
+            background-image: -webkit-linear-gradient(45deg, #f6463d 0%, #f6398d 45%, #f52cdc 100%);
+            position: absolute;
+            top: 0;
+            right: 60px;
+            i{
+                font-size: 1rem;
+            }
+        }
+
+    }
+    .footer__top__ul1{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .footer__top__ul2{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+    .footer__top__widget__socials{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        i{
+            color:  #cccccc;
+            transition: all 0.3s ease 0s;
+            font-size: 14px;    
+        }
+        i:hover{
+            color: #f41068;
+
+        }
+    }
+  }
+  .footer__bottom{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: #777777;
+        font-size: 14px;
+        span{
+            color: #f41068;
+
+        }
+        i{
+            color: #f41068;
+        }
+    }
+  }
+}

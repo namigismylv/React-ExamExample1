@@ -3,7 +3,7 @@ import "./BasketItems.css";
 import BasketItem from "../BasketItem/BasketItem";
 const BasketItems = ({ basketItems }) => {
   return (
-    <table className="table table-dark">
+    <table className="table table-dark mt-5 mb-5">
       <thead>
         <tr>
           <th scope="col">No</th>

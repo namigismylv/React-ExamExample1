@@ -6,6 +6,7 @@ import Dashboard from "../Pages/Admin/Dashboard/Dashboard";
 import Basket from "../Pages/Site/Basket/Basket";
 import Add from "../Pages/Admin/Add/Add";
 import Detail from "../Pages/Site/Detail/Detail";
+import Error from "../Pages/Site/Error/Error";
 
 const ROUTES = [
   {
@@ -23,6 +24,10 @@ const ROUTES = [
       {
         path:"detail/:id",
         element:<Detail/>
+      },
+      {
+        path:"*",
+        element:<Error/>
       }
     ],
   },

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../../Site/Header/Header.css'
 const Header = () => {
   return (
     <header>
-      <div className="header__bottom">
+      <div className="header__bottom" style={{backgroundColor:"lightGrey"}}>
         <div className="header__bottom__left">
           <Link to="/admin">
             <img src="https://preview.colorlib.com/theme/shop/img/logo.png.webp" alt="" />

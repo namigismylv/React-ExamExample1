@@ -1,6 +1,42 @@
-
 .card{
     border: none;
     width: 14rem;
-    
+}
+
+.men__div__main{
+
+    .card {
+        background-color: transparent;
+        h5 {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          font-weight: 600;
+          color: #fff;
+          font-size: 16px;
+        }
+        h3{
+          font-weight: 700;
+          color: #fff;
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        
+      }
+
+}
+
+.women__div__main{
+    h5 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: #222222;
+        font-size: 16px;
+      }
+      h3{
+        font-weight: 700;
+        color: #222222;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
 }
